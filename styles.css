@@ -72,61 +72,63 @@
   --social-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.24);
   --social-ink: var(--ink);
 }
-body.template-personal-brand-pinboard-pop {
+body.template-personal-brand-schedule-clean {
 
   color-scheme: light;
-  --accent: #e60023;
-  --action-bg: transparent;
-  --action-border: transparent;
-  --ambient: linear-gradient(180deg, #fff7f8 0 210px, #ffffff 210px 100%);
-  --avatar-size: 118px;
-  --bio-ink: #454540;
+  --accent: #3b82f6;
+  --action-bg: #ffffff;
+  --action-border: #e5e7eb;
+  --ambient: linear-gradient(180deg, #ffffff 0 210px, #f8f9fa 210px 100%);
+  --avatar-size: 106px;
+  --bio-ink: #374151;
   --canvas: #ffffff;
-  --card-bg: #fbfbf8;
-  --card-border: #e4e0da;
-  --card-shadow: rgba(17, 17, 17, 0.08) 0 24px 64px;
-  --cta-bg: #e60023;
-  --cta-bg-hover: #cc001f;
-  --cta-border: #e60023;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: rgba(17, 17, 17, 0.08) 0 22px 54px;
+  --cta-bg: #111111;
+  --cta-bg-hover: #242424;
+  --cta-border: #111111;
   --cta-ink: #ffffff;
-  --headline-size: 64px;
-  --headline-size-mobile: 38px;
-  --headline-weight: 760;
+  --headline-size: 58px;
+  --headline-size-mobile: 36px;
+  --headline-weight: 650;
   --ink: #111111;
   --link-bg: #ffffff;
-  --link-bg-hover: #fff4f6;
-  --link-border: #e4e0da;
-  --link-gap: 12px;
-  --link-icon-bg: #fff4f6;
-  --link-icon-bg-hover: #e60023;
+  --link-bg-hover: #f8f9fa;
+  --link-border: #e5e7eb;
+  --link-gap: 8px;
+  --link-icon-bg: #f3f4f6;
+  --link-icon-bg-hover: #111111;
   --link-icon-ink-hover: #ffffff;
-  --link-meta: #62625b;
-  --link-shadow-hover: 0 14px 30px rgba(230, 0, 35, 0.14);
-  --meta-bg: #fff4f6;
-  --meta-border: #f4ccd3;
-  --muted: #62625b;
-  --panel-bg: #fbfbf8;
-  --panel-border: #e4e0da;
-  --panel-padding: 18px;
-  --profile-bg: #ffffff;
-  --profile-border: #e4e0da;
-  --profile-button-outset: 22px;
-  --profile-padding: 22px;
-  --radius-action: 999px;
-  --radius-avatar: 32px;
-  --radius-card: 20px;
-  --radius-panel: 26px;
-  --section-gap: 16px;
-  --shell-padding-block: 42px 34px;
-  --shell-width: 860px;
-  --surface: #ffffff;
+  --link-meta: #6b7280;
+  --link-shadow-hover: 0 12px 28px rgba(17, 17, 17, 0.1);
+  --meta-bg: #f8f9fa;
+  --meta-border: #e5e7eb;
+  --muted: #6b7280;
+  --panel-bg: #ffffff;
+  --panel-border: #e5e7eb;
+  --panel-padding: 14px;
+  --profile-align: start;
+  --profile-bg: #f8f9fa;
+  --profile-border: #e5e7eb;
+  --profile-button-outset: 16px;
+  --profile-padding: 18px 16px;
+  --profile-text-align: left;
+  --radius-action: 8px;
+  --radius-avatar: 999px;
+  --radius-card: 12px;
+  --radius-panel: 16px;
+  --section-gap: 12px;
+  --shell-padding-block: 44px 34px;
+  --shell-width: 720px;
+  --surface: #f8f9fa;
   --social-bg: #ffffff;
-  --social-border: #e4e0da;
-  --social-hover-bg: #e60023;
-  --social-hover-border: #e60023;
+  --social-border: #e5e7eb;
+  --social-hover-bg: #111111;
+  --social-hover-border: #111111;
   --social-hover-ink: #ffffff;
   --social-ink: #111111;
-  --surface-2: #fff4f6;
+  --surface-2: #f5f5f5;
   --cta-ink-hover: var(--cta-ink);
   --cta-icon-bg: color-mix(in srgb, var(--cta-ink), transparent 86%);
   --cta-icon-border: color-mix(in srgb, var(--cta-ink), transparent 72%);
@@ -308,12 +310,19 @@ footer span,
 }
 h1 {
   font-family: var(--display-font);
-  font-size: var(--headline-size);
+  font-size: min(var(--headline-size), 44px);
   font-weight: var(--headline-weight);
   letter-spacing: 0;
-  line-height: 1.02;
+  line-height: 1.08;
   margin: 0;
   overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+h1.headline-medium {
+  font-size: min(var(--headline-size), 40px);
+}
+h1.headline-long {
+  font-size: min(var(--headline-size), 34px);
 }
 .bio {
   color: var(--bio-ink, #d0d6e0);
@@ -841,7 +850,14 @@ footer a:hover {
     width: min(calc(100% - 24px), var(--shell-width));
   }
   h1 {
-    font-size: var(--headline-size-mobile);
+    font-size: min(var(--headline-size-mobile), 30px);
+    line-height: 1.1;
+  }
+  h1.headline-medium {
+    font-size: min(var(--headline-size-mobile), 28px);
+  }
+  h1.headline-long {
+    font-size: min(var(--headline-size-mobile), 25px);
   }
   .profile-card {
     padding: max(18px, calc(var(--card-padding) - 8px));
